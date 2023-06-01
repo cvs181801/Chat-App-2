@@ -10,7 +10,7 @@ BEGIN
     RAISE NOTICE 'users table created 🎉';
 
     CREATE TABLE IF NOT EXISTS messages (
-        messageid uuid SERIAL PRIMARY KEY,
+        messageid uuid serial PRIMARY KEY,
         text TEXT,
         created_at timestamp without time zone DEFAULT now() NOT NULL,
         user_id uuid references users(id) NOT NULL
